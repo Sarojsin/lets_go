@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Team member data
     const teamMembers = {
-        alex: {
-            name: "Alex Morgan",
+        saroj: {
+            name: "Saroj Singh Dhami",
             role: "Lead Full-Stack Developer",
-            bio: "Alex leads our full-stack development initiatives with over 12 years of experience building scalable web applications for Fortune 500 companies. He specializes in React, Node.js, and cloud-native architectures.",
-            details: "Alex has architected systems serving over 5 million users and is passionate about performance optimization and clean code practices. He holds a Master's degree in Computer Science from Stanford University.",
-            skills: ["React", "Node.js", "TypeScript", "AWS", "MongoDB", "GraphQL", "Microservices"],
-            experience: "12+ years",
-            education: "M.S. Computer Science, Stanford University",
+            bio: "Saroj leads our full-stack development initiatives with 3+ years of experience building modern web applications. He specializes in AI, ML, and scalable cloud-native architectures.",
+            details: "Saroj has extensive experience with Python, FastAPI, and AWS. He is passionate about building intelligent systems and optimizing backend performance.",
+            skills: ["Python", "FastAPI", "AI/ML", "AWS", "PostgreSQL", "Docker", "Kubernetes"],
+            experience: "3+ years",
+            education: "Computer Science",
             achievements: [
-                "Led development of a fintech platform processing $1B+ in transactions annually",
-                "Reduced application load times by 70% through performance optimization",
-                "Mentored 20+ junior developers who now lead their own teams"
+                "Developed scalable backend for AI-driven platforms",
+                "Implemented complex cloud architectures on AWS and Render",
+                "Specialized in PostgreSQL database optimization"
             ]
         },
         sarah: {
@@ -37,34 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 "Designed a component library used by 100,000+ daily active users",
                 "Improved Lighthouse scores from 65 to 95+ across client projects",
                 "Speaker at multiple web development conferences"
-            ]
-        },
-        marcus: {
-            name: "Marcus Johnson",
-            role: "Backend & DevOps Engineer",
-            bio: "Marcus ensures our applications are reliable, scalable, and secure. He specializes in microservices architecture, database optimization, and CI/CD pipelines.",
-            details: "Marcus has implemented DevOps practices that reduced deployment times by 80% and improved system reliability to 99.99% uptime. He's certified in AWS and Kubernetes.",
-            skills: ["Python", "Docker", "Kubernetes", "PostgreSQL", "Redis", "CI/CD", "AWS"],
-            experience: "10+ years",
-            education: "B.S. Software Engineering, MIT",
-            achievements: [
-                "Reduced cloud infrastructure costs by 40% through optimization",
-                "Implemented a CI/CD pipeline that deploys 50+ times per day",
-                "Maintained 99.99% uptime for mission-critical applications"
-            ]
-        },
-        jamie: {
-            name: "Jamie Rivera",
-            role: "UX/UI Design Lead",
-            bio: "Jamie bridges the gap between design and development, creating intuitive, user-centered digital products that drive engagement and conversions.",
-            details: "With a background in both psychology and design, Jamie uses data-driven approaches to create interfaces that users love. She has increased conversion rates by up to 40% for client projects.",
-            skills: ["Figma", "Sketch", "User Research", "Prototyping", "Design Systems", "A/B Testing"],
-            experience: "8+ years",
-            education: "M.A. Human-Computer Interaction, University of Washington",
-            achievements: [
-                "Increased e-commerce conversion rates by 40% through UX improvements",
-                "Created a design system that reduced development time by 30%",
-                "Conducted user research studies with 5,000+ participants"
             ]
         },
         michael: {
@@ -145,9 +117,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         
                         <div class="modal-actions" style="margin-top: 2rem;">
-                            <button class="btn btn-primary" onclick="window.location.href='contact.html?subject=Work+with+${encodeURIComponent(member.name.split(' ')[0])}'">
+                            <a href="contact.html?subject=Work+with+${encodeURIComponent(member.name)}" class="btn btn-primary">
                                 <i class="fas fa-envelope"></i> Contact ${member.name.split(' ')[0]}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 `;
@@ -156,24 +128,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 modal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
 
-                // Animate modal appearance
+                // Animate modal appearance with GSAP
                 if (typeof gsap !== 'undefined') {
-                    gsap.from('.modal-content', {
-                        duration: 0.5,
-                        y: 50,
-                        opacity: 0,
-                        ease: 'power3.out'
-                    });
+                    // Use fromTo to ensure animation starts from 0 opacity every time
+                    gsap.fromTo('.modal-content',
+                        { y: 50, opacity: 0 },
+                        {
+                            duration: 0.5,
+                            y: 0,
+                            opacity: 1,
+                            ease: 'power3.out',
+                            clearProps: 'transform' // Optional but clean
+                        }
+                    );
                 }
+            } else {
+                console.warn(`No data found for team member ID: ${memberId}`);
             }
         });
     });
 
     // Close modal
     if (closeModal) {
-        closeModal.addEventListener('click', function () {
-            closeModalAnimation();
-        });
+        closeModal.addEventListener('click', closeModalAnimation);
     }
 
     // Close modal when clicking outside

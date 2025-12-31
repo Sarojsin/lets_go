@@ -740,14 +740,24 @@ select.form-control {
 
 /* Animations */
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    /* Default to visible for non-JS fallbacks */
+    transform: none;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* If GSAP is present, we'll let it handle the initial state. 
+   But if we use ScrollTrigger via CSS as a fallback: */
+@media (prefers-reduced-motion: no-preference) {
+    .js-enabled .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .js-enabled .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .slide-in-left {

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Staggered Animations for lists/grids
-        const staggerContainers = document.querySelectorAll('.services-grid, .team-grid, .contact-container');
+        const staggerContainers = document.querySelectorAll('.services-grid, .contact-container');
         staggerContainers.forEach(container => {
             const children = container.children;
             if (children.length > 0) {
