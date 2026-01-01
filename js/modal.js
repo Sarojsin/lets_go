@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
+        rijan: {
+            name: "Rijan Ghimire",
+            role: "Frontend Developer",
+            bio: "Rijan focuses on creating responsive, accessible user interfaces with modern JavaScript frameworks. He has a keen eye for design and user experience.",
+            details: "With 2 years of frontend development experience, Rijan has built academic and personal frontend projects focusing on clean UI and interactivity.",
+            skills: ["React", "CSS/SCSS", "Java Script", "UI/UX", "Responsive Design"],
+            experience: "2+ years",
+            education: "Computer Engineering from Tribhuvan University(TU) ,Advance College of Engineering",
         Abishek: {
             name: "Abishek Bhatt",
             role: "Senior Video Graphy",
@@ -39,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
             experience: "2+ years",
             education: "B.S. Interaction Design, Carnegie Mellon",
             achievements: [
-                "Designed a component library used by 100,000+ daily active users",
-                "Improved Lighthouse scores from 65 to 95+ across client projects",
-                "Speaker at multiple web development conferences"
+                "Developed 5+ responsive web applications",
+                "Have worked on real-world scenarios",
+                "Experience using Git and GitHub"
             ]
         },
         michael: {
