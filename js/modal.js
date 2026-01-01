@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
             skills: ["React", "CSS/SCSS", "Java Script", "UI/UX", "Responsive Design"],
             experience: "2+ years",
             education: "Computer Engineering from Tribhuvan University(TU) ,Advance College of Engineering",
+        Abishek: {
+            name: "Abishek Bhatt",
+            role: "Senior Video Graphy",
+            bio: "Abishek focuses on creating content (like youtube , facebook ,tiktok and instagram) ,.",
+            details: "With 5 years of experience in video editing and content creation, Abishek has produced engaging content for various platforms. He specializes in thumbnail creation and speaking.",
+            skills: ["Video editing", "Thumbnail creation", "Speaking", "Content creation", "Social media management"],
+            experience: "2+ years",
+            education: "B.S. Interaction Design, Carnegie Mellon",
             achievements: [
                 "Developed 5+ responsive web applications",
                 "Have worked on real-world scenarios",
