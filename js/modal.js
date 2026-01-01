@@ -30,18 +30,18 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-        sarah: {
-            name: "Sarah Chen",
-            role: "Senior Frontend Architect",
-            bio: "Sarah focuses on creating responsive, accessible user interfaces with modern JavaScript frameworks. She has a keen eye for design and user experience.",
-            details: "With 9 years of frontend development experience, Sarah has built design systems used by teams of 50+ developers. She's an advocate for web accessibility and performance optimization.",
-            skills: ["Vue.js", "React", "CSS/SCSS", "Webpack", "Jest", "Accessibility", "UI/UX"],
-            experience: "9+ years",
-            education: "B.S. Interaction Design, Carnegie Mellon",
+        rijan: {
+            name: "Rijan Ghimire",
+            role: "Frontend Developer",
+            bio: "Rijan focuses on creating responsive, accessible user interfaces with modern JavaScript frameworks. He has a keen eye for design and user experience.",
+            details: "With 2 years of frontend development experience, Rijan has built academic and personal frontend projects focusing on clean UI and interactivity.",
+            skills: ["React", "CSS/SCSS", "Java Script", "UI/UX", "Responsive Design"],
+            experience: "2+ years",
+            education: "Computer Engineering from Tribhuvan University(TU) ,Advance College of Engineering",
             achievements: [
-                "Designed a component library used by 100,000+ daily active users",
-                "Improved Lighthouse scores from 65 to 95+ across client projects",
-                "Speaker at multiple web development conferences"
+                "Developed 5+ responsive web applications",
+                "Have worked on real-world scenarios",
+                "Experience using Git and GitHub"
             ]
         },
         michael: {
