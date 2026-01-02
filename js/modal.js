@@ -60,18 +60,44 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         rijan: {
             name: "Rijan Shakya",
-            role: "Junior Web Developer",           
+            role: "Junior Web Developer",
             bio: "Rijan is a junior web developer with a passion for building responsive and user-friendly websites. He has experience in both frontend and backend development.",
             details: "Rijan has worked on several projects using HTML, CSS, JavaScript, and popular frameworks. He is eager to learn and grow in the web development field.",
-            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],    
+            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
             experience: "1+ years",
             education: "B.Sc. in Computer Science, Kathmandu University",
-            achievements: [ 
+            achievements: [
                 "Contributed to open-source web development projects",
                 "Built a personal portfolio website showcasing projects",
                 "Completed web development bootcamps and certifications"
             ]
+        },
+
+        Sushil: {
+            name: "Sushil Ghimire",
+            role: "Frontend Developer",
+            bio: "Frontend developer focused on building modern, responsive, and visually engaging web interfaces using React and Tailwind CSS, with strong attention to UI/UX and performance.",
+            details: "Sushil specializes in creating clean, scalable frontend architectures and polished user experiences. He emphasizes modern design systems, smooth animations, and accessibility while working closely with backend APIs.",
+            skills: [
+                "JavaScript (ES6+)",
+                "React",
+                "Tailwind CSS",
+                "UI/UX Design",
+                "Modern Animations",
+                "MongoDB (Basics)",
+                "REST APIs",
+                "Responsive Design"
+            ],
+            experience: "Frontend-focused project experience",
+            education: "Bachelor’s Degree in Computer Engineering",
+            achievements: [
+                "Built modern, responsive web interfaces using React and Tailwind CSS",
+                "Designed user-friendly UI/UX layouts with accessibility in mind",
+                "Implemented smooth UI animations for enhanced user experience",
+                "Collaborated on full-stack projects integrating frontend with MongoDB-backed APIs"
+            ]
         }
+
     };
 
     // Open modal when clicking view details
@@ -194,7 +220,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add modal styles dynamically
     const modalStyles = `
         .member-info-section {
-            background: rgba(99, 102, 241, 0.05);
+            background: rgba(60, 63, 241, 0.16);
+            .element {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* required for Safari */
+}
+
             padding: 1rem;
             border-radius: var(--radius-sm);
             margin: 1.5rem 0;

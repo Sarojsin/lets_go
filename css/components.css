@@ -107,7 +107,7 @@ nav {
     box-shadow: var(--shadow);
     display: none;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
     z-index: 999;
 }
 
@@ -131,7 +131,10 @@ nav {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -148,17 +151,24 @@ nav {
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 800px;
+    height:fit-content;
     position: relative;
     z-index: 1;
 }
 
 .hero h1 {
+    text-align: center;
     margin-bottom: 1.5rem;
     font-size: 4rem;
 }
 
 .hero p {
+    text-align: center;
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -330,20 +340,32 @@ nav {
 }
 
 .team-member {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
     background: var(--card-bg);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
+    border:2px solid rgb(187, 248, 73);
+    border-radius:2rem;
+    padding:1rem 1.5rem;
 }
 
 .team-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 40px rgba(33, 231, 215, 0.623);
 }
 
 .member-image {
+    position:static;
+    top:1rem;
+    border-radius:50%;
+    width:250px;
     height: 250px;
     overflow: hidden;
 }
@@ -360,6 +382,13 @@ nav {
 }
 
 .member-info {
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:250px;
+    gap:1rem;
     padding: 1.5rem;
 }
 
@@ -390,8 +419,81 @@ nav {
     font-size: 0.85rem;
     font-weight: 500;
 }
+.member-socials {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: currentColor;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+/* LinkedIn */
+.social-icon.linkedin {
+    color: #0a66c2;
+}
+.social-icon.linkedin::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.82-2.2 3.75-2.2 4 0 4.75 2.6 4.75 6v10h-4v-8.9c0-2.1 0-4.8-3-4.8s-3.4 2.3-3.4 4.6V24h-4V8z'/%3E%3C/svg%3E");
+}
+
+/* WhatsApp */
+.social-icon.whatsapp {
+    color: #22c55e;
+}
+.social-icon.whatsapp::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C8.28 2 2 8.28 2 16c0 2.8.83 5.4 2.25 7.6L2 30l6.6-2.2A13.94 13.94 0 0 0 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm7.3 19.3c-.3.8-1.6 1.5-2.2 1.6-.6.1-1.3.1-2.1-.1-.5-.1-1.2-.4-2-.7-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.8-1.4-3.4 0-1.6.8-2.4 1.1-2.7.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.7.5.3.6.9 2.1 1 2.3.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.3.3-.5.5-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.3-.3 1-1.1 1.3-1.5.3-.4.6-.3 1-.2.4.1 2.4 1.1 2.8 1.3.4.2.6.3.7.5.1.2.1.9-.2 1.7z'/%3E%3C/svg%3E");
+}
+
+/* Instagram */
+.social-icon.instagram {
+    color: #e1306c;
+}
+.social-icon.instagram::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.8A4.2 4.2 0 1 0 16.2 12 4.2 4.2 0 0 0 12 7.8zm6.3-.9a1 1 0 1 0-1 1 1 1 0 0 0 1-1z'/%3E%3C/svg%3E");
+}
+
+/* Facebook */
+.social-icon.facebook {
+    color: #1877f2;
+}
+.social-icon.facebook::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.8c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z'/%3E%3C/svg%3E");
+}
+
 
 .view-details {
+    position: static;
+    buttom:1rem;
     background: var(--primary);
     color: white;
     border: none;
@@ -443,6 +545,14 @@ nav {
 }
 
 .modal-body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    background-color: var(--primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* required for Safari */
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -463,7 +573,10 @@ nav {
 }
 
 .modal-image {
-    border-radius: var(--radius);
+    height:10rem;
+    width:10rem;
+    object-fit: cover;
+    border-radius: 50%;
     overflow: hidden;
 }
 
