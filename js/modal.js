@@ -71,7 +71,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 "Built a personal portfolio website showcasing projects",
                 "Completed web development bootcamps and certifications"
             ]
-        }
+        },
+        Sushil: {
+    name: "Sushil Ghimire",
+    role: "Frontend Developer",
+    bio: "Frontend developer focused on building modern, responsive, and visually engaging web interfaces using React and Tailwind CSS, with strong attention to UI/UX and performance.",
+    details: "Sushil specializes in creating clean, scalable frontend architectures and polished user experiences. He emphasizes modern design systems, smooth animations, and accessibility while working closely with backend APIs.",
+    skills: [
+        "JavaScript (ES6+)",
+        "React",
+        "Tailwind CSS",
+        "UI/UX Design",
+        "Modern Animations",
+        "MongoDB (Basics)",
+        "REST APIs",
+        "Responsive Design"
+    ],
+    experience: "Frontend-focused project experience",
+    education: "Bachelor’s Degree in Computer Engineering",
+    achievements: [
+        "Built modern, responsive web interfaces using React and Tailwind CSS",
+        "Designed user-friendly UI/UX layouts with accessibility in mind",
+        "Implemented smooth UI animations for enhanced user experience",
+        "Collaborated on full-stack projects integrating frontend with MongoDB-backed APIs"
+    ]
+},
+
+
     };
 
     // Open modal when clicking view details
