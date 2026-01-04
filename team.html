@@ -9,270 +9,147 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/team.css">
 </head>
 
 <body>
     <!-- Header & Navigation -->
-  <div id="header-placeholder"></div> <!-- Dynamic header insertion -->
+    <div id="header-placeholder"></div> <!-- Dynamic header insertion -->
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content">
-                <h1 data-i18n-key="team.hero.title">Meet Our Senior Team</h1>
-                <p data-i18n-key="team.hero.subtitle">The experienced developers and strategists behind our success</p>
+    <div class="container">
+        <div class="header">
+            <h1>Meet Our Amazing Team</h1>
+            <p>We're a passionate group of developers, designers, and innovators dedicated to crafting exceptional web experiences</p>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-grid">
+
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <img src="./media/saroj_ssd.jpeg" class="avatar ceo">
+                <h2 class="name">Saroj Singh Dhami</h2>
+                <p class="role">Lead Full-Stack Developer</p>
+                <p class="bio">3+ years experience in modern web technologies, and cloud architecture. Specializes in
+                    scalable enterprise applications.</p>
+
+                <div class="skills">
+                    <span class="skill-tag">Python: other modules/package</span>
+                    <span class="skill-tag">Major: AI & ML</span>
+                    <span class="skill-tag">Backend: FastAPI</span>
+                    <span class="skill-tag">Cloud: AWS, Render</span>
+                    <span class="skill-tag">Docker & Kubernetes</span>
+                    <span class="skill-tag">Basic: C, C++</span>
+                    <span class="skill-tag">Database: PostgreSQL, DBeaver</span>
+                </div>
+                    
+                    
+                <div class="social-links">
+                    <a href="https://wa.me/9779820243416" class="social-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/pain-undefined-5b314a2b5" class="social-icon linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Sarojsin" class="social-icon github"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/saroj.dhami.710" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/saroj.dhami.710/" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <button class="view-details" data-member="saroj">View Details</button>
+                
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="avatar cto">JC</div>
+                <h2 class="name">James Chen</h2>
+                <p class="role">CTO</p>
+                <p class="bio">Tech genius architecting scalable solutions. Passionate about cloud infrastructure and cutting-edge frameworks.</p>
+                <div class="skills">
+                    <span class="skill-tag">Cloud</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">Architecture</span>
+                </div>
+                <div class="social-links">
+                    <div class="social-icon">💻</div>
+                    <div class="social-icon">🔗</div>
+                    <div class="social-icon">📧</div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="avatar lead">ER</div>
+                <h2 class="name">Emily Rodriguez</h2>
+                <p class="role">Lead Developer</p>
+                <p class="bio">Full-stack maestro turning complex problems into elegant code. Mentors junior devs with patience and expertise.</p>
+                <div class="skills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+                <div class="social-links">
+                    <div class="social-icon">🐙</div>
+                    <div class="social-icon">💼</div>
+                    <div class="social-icon">📧</div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="avatar designer">MA</div>
+                <h2 class="name">Marcus Anderson</h2>
+                <p class="role">UI/UX Designer</p>
+                <p class="bio">Creates stunning interfaces that users love. Combines aesthetics with usability to deliver memorable experiences.</p>
+                <div class="skills">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">UI Design</span>
+                    <span class="skill-tag">Prototyping</span>
+                </div>
+                <div class="social-links">
+                    <div class="social-icon">🎨</div>
+                    <div class="social-icon">📱</div>
+                    <div class="social-icon">📧</div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="team-card">
+                <div class="avatar backend">LP</div>
+                <h2 class="name">Lisa Park</h2>
+                <p class="role">Backend Engineer</p>
+                <p class="bio">Database wizard optimizing performance. Ensures systems run smoothly even under heavy traffic.</p>
+                <div class="skills">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">APIs</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+                <div class="social-links">
+                    <div class="social-icon">⚙️</div>
+                    <div class="social-icon">💻</div>
+                    <div class="social-icon">📧</div>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="team-card">
+                <div class="avatar frontend">DK</div>
+                <h2 class="name">David Kim</h2>
+                <p class="role">Frontend Developer</p>
+                <p class="bio">Animation expert bringing designs to life. Obsessed with performance, accessibility, and pixel-perfect implementations.</p>
+                <div class="skills">
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Animation</span>
+                </div>
+                <div class="social-links">
+                    <div class="social-icon">🚀</div>
+                    <div class="social-icon">🎭</div>
+                    <div class="social-icon">📧</div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" style="background: rgba(99, 102, 241, 0.03);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Leadership Team</h2>
-                <p>Our senior leadership brings decades of combined experience to every project.</p>
-            </div>
-
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="media\saroj_ssd.jpeg" alt="Saroj Singh Dhami">
-                    </div>
-                    <div class="member-info">
-                        <h3>Saroj Singh Dhami</h3>
-                        <span class="member-role">Lead Full-Stack Developer</span>
-                        <p>3+ years experience in modern web technologies, and cloud architecture. Specializes in
-                            scalable enterprise applications.</p>
-                       
-
-                        <div class="member-skills">
-                            <span class="skill-tag">Python: other modules/package</span>
-                            <span class="skill-tag">major on: AI and ML </span>
-                            <span class="skill-tag">Backend :fastapi</span>
-                            <span class="skill-tag">cloud: AWS, render</span>
-                            <span class="skill-tag">Docker and Kubernetes</span>
-                            <span class="skill-tag"> basic:c , c++</span>
-                            <span class="skill-tag">database:PostgreSQL,Dbeaver</span>
-
-                        </div>
-                         <p>Email:
-                            <a href="mailto:sagardhami84@gmail.com" style="color: #16dc0c;">
-                                sagardhami84@gmail.com
-                            </a>
-                        </p>
-                        <p>Phone number:
-                            <a href="tel:+9779820243416" style="color: #16dc0c;">
-                                +977 9820243416
-                            </a>
-                        </p>
-                       <div class="member-socials">
-    <a href="https://www.linkedin.com/in/pain-undefined-5b314a2b5" target="_blank"
-       aria-label="LinkedIn" class="social-icon linkedin"></a>
-
-    <a href="https://wa.me/9779820243416" target="_blank"
-       aria-label="WhatsApp" class="social-icon whatsapp"></a>
-
-    <a href="https://www.instagram.com/saroj.dhami.710/" target="_blank"
-       aria-label="Instagram" class="social-icon instagram"></a>
-
-    <a href="https://www.facebook.com/saroj.dhami.710" target="_blank"
-       aria-label="Facebook" class="social-icon facebook"></a>
-</div>
-
-                        <button class="view-details" data-member="saroj" style="color: #16dc0c;">View Details</button>
-                    </div>
-                </div>
-
-                <!-- Team Member abishek 2-->
-                <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="media\Abishek.jpeg"
-                            alt="member img">
-                    </div>
-                    <div class="member-info">
-                        <h3>Abishek Bhatt</h3>
-                        <span class="member-role">content creator</span>
-                        <p>Focuses on creating responsive, accessible user interfaces with modern JavaScript frameworks
-                            and CSS.</p>
-
-                        <div class="member-skills">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS/SCSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">UI/UX</span>
-                        </div>
-                        <div class="member-contact" style="margin-top: 20px;">
-                            <p>Email:
-                                <a href="mailto:abbu@gmail.com" style="color: #16dc0c; font-size: 16px;">
-                                abbu@gmail.com
-                                </a>
-                            </p>
-                            <p style="font-size: 16px;">Phone number:
-                                <a href="tel:+977986666666" style="color: #16dc0c;">
-                                    +977 986666666
-                                </a>
-                            </p>
-                        </div>
-                        <div class="member-socials" style="margin-top: 20px;">
-                            <a href="https://www.instagram.com/rand_?utm_source=qr&igsh=MWk4b3h2bW1xem5pbg==" target="_blank" aria-label="Instagram" class="social-icon instagram"></a>
-                            <a href="https://wa.me/9779824718634" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"></a>
-                        </div>
-                        <button class="view-details" data-member="abishek" style="color: #16dc0c;">View Details</button>
-                    </div>
-                </div>
-                <!-- Team Member 3 -->
-                <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="./media/rijan.png"
-                            alt="member img">
-                    </div>
-                    <div class="member-info">
-                        <h3>Rijan Ghimire</h3>
-                        <span class="member-role">Frontend Developer</span>
-                        <p>Focuses on creating responsive, accessible user interfaces with modern JavaScript frameworks
-                            and CSS.</p>
-
-                        <div class="member-skills">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS/SCSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">UI/UX</span>
-                        </div>
-                        <div class="member-contact" style="margin-top: 20px;">
-                            <p>Email:
-                                <a href="mailto:rizanghimire2021@gmail.com" style="color: #16dc0c; font-size: 16px;">
-                                    rizanghimire2021@gmail.com
-                                </a>
-                            </p>
-                            <p style="font-size: 16px;">Phone number:
-                                <a href="tel:+9779820243416" style="color: #16dc0c;">
-                                    +977 9824718634
-                                </a>
-                            </p>
-                        </div>
-                        <div class="member-socials" style="margin-top: 20px;">
-                            <a href="https://www.instagram.com/rijan_ghimire_?utm_source=qr&igsh=MWk4b3h2bW1xem5pbg==" target="_blank" aria-label="Instagram" class="social-icon instagram"></a>
-                            <a href="https://wa.me/9779824718634" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"></a>
-                        </div>
-                        <button class="view-details" data-member="rijan" style="color: #16dc0c;">View Details</button>
-                    </div>
-                </div>
-                                  <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="./media/Sushil.jpg"
-                            alt="Sushil Profile">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sushil Ghimire</h3>
-                        <span class="member-role">Frontend Developer</span>
-                        <p>Specializes in Modern UI design with backend integration, API handeling</p>
-                        <div class="member-socials">
-                            <a href="https://www.linkedin.com/in/sushil-ghimire-959a64327/" target="_blank"
-                                aria-label="LinkedIn">LinkedIn🔗</a>
-                            <a href="https://wa.me/9779864156531" target="_blank" aria-label="WhatsApp">WhatsApp💬</a>
-                            <a href="https://www.instagram.com/sushil_ghimire.17/" target="_blank"
-                                aria-label="Instagram">Instagram📸</a>
-                            <a href="https://www.facebook.com/sushil.ghimire.7739/" target="_blank"
-                                aria-label="Facebook">Facebook📘</a>
-                        </div>
-                        <div class="member-skills">
-                            <span class="skill-tag">Vue JS </span>
-                            <span class="skill-tag">React JS</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">MongoDB</span>
-                        </div>
-                        <div class="member-contact">
-                            <p>Email: sushilghimire342@gmail.com</p>
-                            <p>Phone: +977 9864156531</p>
-                        </div>
-                        <button class="view-details" data-member="Sushil">View Details</button>
-                    </div>
-                </div>
-             </div>
-
-
-                 <!-- Team Member 5 -->
-                <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="media\Sujal_Pant.jpg" alt="sushilhimire2021">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sujal Pant</h3>
-                        <span class="member-role">Backend Developer
-                        </span>
-                        <p>3+ years experience in modern web technologies, and cloud architecture. Specializes in
-                            scalable enterprise applications.</p>
-                        <p>Email:
-                            <a href="mailto:sujalpant678@gmail.com" style="color: #16dc0c;">
-                                sujalpant678@gmail.com
-                            </a>
-                        </p>
-                        <p>Phone number:
-                            <a href="tel:+9779862489025" style="color: #16dc0c;">
-                                +977 9862489025
-                            </a>
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Java: other modules/package</span>
-                            <span class="skill-tag">major on: Backend and Matlab</span>
-                            <span class="skill-tag">Backend :next.js</span>
-                            <span class="skill-tag">Frontend :react</span>
-                        </div>
-                          <div class="member-socials">
-                            <a href="https://www.linkedin.com/in/pain-undefined-5b314a2b5" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"></a>
-                            <a href="https://wa.me/9779862489025" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp"></a>
-                            <a href="https://www.instagram.com/sujal_pant/" target="_blank" aria-label="Instagram" class="social-icon instagram"></a>
-                            <a href="https://www.facebook.com/sujal.pant.769680" target="_blank" aria-label="Facebook" class="social-icon facebook"></a>
-                        </div>
-                        <button class="view-details" data-member="saroj" style="color: #16dc0c;">View Details</button>
-                    </div>
-                </div>
-                                 <!-- Team Member 6-->
-                <div class="team-member fade-in">
-                    <div class="member-image">
-                        <img src="media\saroj_ssd.jpeg" alt="bibek bist">
-                    </div>
-                    <div class="member-info">
-                        <h3>bibek bist</h3>
-                        <span class="member-role"> Developer
-                        </span>
-                        <p>3+ years experience in modern web technologies, and cloud architecture. Specializes in
-                            scalable enterprise applications.</p>
-                        <p>Email:
-                            <a href="mailto:sujalpant678@gmail.com" style="color: #16dc0c;">
-                                8@gmail.com
-                            </a>
-                        </p>
-                        <p>Phone number:
-                            <a href="tel:+9779862489025" style="color: #16dc0c;">
-                                +977 98
-                            </a>
-                        </p>
-                        <div class="member-socials">
-                            <a href="https://www.linkedin.com/in/" target="_blank"
-                                aria-label="LinkedIn">LinkedIn🔗</a>
-                            <a href="https://wa.me/9779862489025" target="_blank" aria-label="WhatsApp">WhatsApp💬</a>
-                            <a href="https://www.instagram.com//" target="_blank"
-                                aria-label="Instagram">Instagram📸</a>
-                            <a href="https://www.facebook.com/" target="_blank"
-                                aria-label="Facebook">Facebook📘</a>
-                        </div>
-
-                        <div class="member-skills">
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">major on: </span>
-                            <span class="skill-tag">Backend :</span>
-                            <span class="skill-tag">Frontend :</span>
-                        </div>
-                        <button class="view-details" data-member="saroj" style="color: #16dc0c;">View Details</button>
-                    </div>
-                </div>
+    </div>
 
     <!-- Join Team CTA -->
     <section class="cta-section">
