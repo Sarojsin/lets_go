@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         rijan: {
-            name: "Rijan Shakya",
+            name: "Rijan Ghimire",
             role: "Junior Web Developer",
             bio: "Rijan is a junior web developer with a passion for building responsive and user-friendly websites. He has experience in both frontend and backend development.",
             details: "Rijan has worked on several projects using HTML, CSS, JavaScript, and popular frameworks. He is eager to learn and grow in the web development field.",
             skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
-            experience: "1+ years",
-            education: "B.Sc. in Computer Science, Kathmandu University",
+            experience: "2+ years",
+            education: "Computer Engineering from Tribhuvan University(TU) ,collage advance collage of engineering",
             achievements: [
                 "Contributed to open-source web development projects",
                 "Built a personal portfolio website showcasing projects",
