@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TARAISHA TECH</title>
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
         })();
@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="./media/company logo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link
@@ -36,119 +37,127 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="aesthetic-section">
+        <!-- Ambient Decor -->
+        <div class="ambient-glows">
+            <div class="glow-1"></div>
+            <div class="glow-2"></div>
+        </div>
+
         <div class="container">
             <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-card slide-in-left">
-                        <h3><i class="fas fa-envelope"></i> Email Us</h3>
-                        <p><strong>General Inquiries:</strong><br>letsdoit69960@gmail.com</p>
-                        <p><strong>Support:</strong><br>sagardhami84@gmail.com</p>
-                        <p>We typically respond within 24 hours.</p>
-                    </div>
-
-                    <div class="contact-card slide-in-left">
-                        <h3><i class="fas fa-phone"></i> Call Us</h3>
-                        <p><strong>MNR Office:</strong><br>9705308365</p>
-                        <p><strong>KTM Office:</strong><br>9820243416</p>
-                        <p>Mon-Fri, 9am-6pm EST/GMT</p>
-                    </div>
-
-                    <div class="contact-card slide-in-left">
-                        <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
-                        <p><strong>Office:</strong><br>123 Tech Street<br>San Francisco, CA 94107</p>
-                        <p><strong>Office:</strong><br>45 Innovation Way<br>London, EC1A 1BB</p>
-                    </div>
-
-                    <div class="social-links slide-in-left">
-                        <h3>Connect With Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="contact-card slide-in-left">
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <p><strong>General Inquiries:</strong><br>info@taraishatech.com</p>
+                    <p><strong>Support:</strong><br>support@taraishatech.com</p>
+                    <p>We typically respond within 24 hours.</p>
                 </div>
 
-                <div class="contact-form slide-in-right">
-                    <h2 data-i18n-key="contact.form.title">Send Us a Message</h2>
-                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                <div class="contact-card slide-in-left">
+                    <h3><i class="fas fa-phone"></i> Call Us</h3>
+                    <p><strong>MNR Office:</strong><br>+977 9812345678</p>
+                    <p><strong>KTM Office:</strong><br>+977 01-4455667</p>
+                    <p>Mon-Sun, 9am-6pm NST</p>
+                </div>
 
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
+                <div class="contact-card slide-in-left">
+                    <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+                    <p><strong>Office:</strong><br>Mahendranagar, Kanchanpur<br>Sudurpashchim, Nepal</p>
+                    <p><strong>Office:</strong><br>Kathmandu, Nepal<br>Bagmati, Nepal</p>
+                </div>
 
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <select id="subject" class="form-control" required>
-                                <option value="">Select a topic</option>
-                                <option value="web-development">Web Development Project</option>
-                                <option value="mobile-app">Mobile App Development</option>
-                                <option value="ui-ux">UI/UX Design Services</option>
-                                <option value="consultation">Technical Consultation</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                                <option value="career">Career Opportunity</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="budget">Project Budget</label>
-                            <select id="budget" class="form-control">
-                                <option value="">Select budget range</option>
-                                <option value="under-10k">Under $10,000</option>
-                                <option value="10k-50k">$10,000 - $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-plus">$100,000+</option>
-                                <option value="not-sure">Not sure yet</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" class="form-control" rows="6" required></textarea>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" id="newsletter" class="form-check-input">
-                            <label for="newsletter" class="form-check-label">
-                                Subscribe to our newsletter for updates and insights
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
-                            <i class="fas fa-paper-plane"></i> <span data-i18n-key="contact.form.submit">Send
-                                Message</span>
-                        </button>
-                    </form>
+                <div class="social-links slide-in-left">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Sarojsin" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lets-do-it-b421b63a0/" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="https://www.instagram.com/taraisha_tech/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61585804447961" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <div class="contact-form slide-in-right">
+                <h2 data-i18n-key="contact.form.title">Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Select a topic</option>
+                            <option value="web-development">Web Development Project</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="ui-ux">UI/UX Design Services</option>
+                            <option value="consultation">Technical Consultation</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="career">Career Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" class="form-control">
+                            <option value="">Select budget range</option>
+                            <option value="under-10k">Under $10,000</option>
+                            <option value="10k-50k">$10,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-plus">$100,000+</option>
+                            <option value="not-sure">Not sure yet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" class="form-control" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter" class="form-check-input">
+                        <label for="newsletter" class="form-check-label">
+                            Subscribe to our newsletter for updates and insights
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n-key="contact.form.submit">Send
+                            Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -224,8 +233,8 @@
 
     <!-- JavaScript Files -->
     <script src="js/main.js"></script>
-    <script src="js/i18n/i18n.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="media/js/i18n/i18n.js"></script>
+    <script src="media/js/animations.js"></script>
     <script>
         // Contact form handling for contact page
         document.addEventListener('DOMContentLoaded', function () {

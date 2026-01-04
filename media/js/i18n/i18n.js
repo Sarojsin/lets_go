@@ -7,7 +7,7 @@ const I18n = (function () {
     let translations = {};
 
     async function loadTranslations(lang) {
-        const response = await fetch(`js/i18n/${lang}.json`);
+        const response = await fetch(`media/js/i18n/${lang}.json`);
         if (!response.ok) {
             console.error(`Failed to load language file: ${lang}`);
             return {};

@@ -8,60 +8,60 @@ document.documentElement.classList.add('js-enabled');
     // Function to initialize the theme toggle (call it now and after header insertion)
     function initThemeToggle() {
         const savedTheme = localStorage.getItem('theme') || 'dark';
-        
+
         // Apply saved theme instantly
         document.documentElement.setAttribute('data-theme', savedTheme);
-        
+
         const themeToggle = document.getElementById('themeToggle');
         if (!themeToggle) return; // Not ready yet
-        
+
         const themeIcon = themeToggle.querySelector('i');
         if (themeIcon) {
             themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
-        
+
         // Remove any old listeners to avoid duplicates
         themeToggle.replaceWith(themeToggle.cloneNode(true));
         const newToggle = document.getElementById('themeToggle');
-        
+
         newToggle.addEventListener('click', function () {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
+
             const newIcon = newToggle.querySelector('i');
             if (newIcon) {
                 newIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
             }
-            
+
             // Force repaint
             document.body.style.display = 'none';
             document.body.offsetHeight;
             document.body.style.display = '';
         });
     }
-    
+
     // Run immediately (for index.html where button is hardcoded)
     initThemeToggle();
-    
+
     // Run again after dynamic header is inserted (for other pages)
     // Use MutationObserver to detect when #themeToggle appears
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function() {
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function () {
             if (document.getElementById('themeToggle')) {
                 initThemeToggle();
                 observer.disconnect(); // Stop observing once found
             }
         });
     });
-    
+
     observer.observe(document.documentElement, {
         childList: true,
         subtree: true
     });
-    
+
     // Fallback: Run after a short delay (in case observer misses it)
     setTimeout(initThemeToggle, 500);
 })();
@@ -75,24 +75,24 @@ if (mobileMenuBtn && mobileNav) {
     // Open menu
     mobileMenuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        mobileNav.classList.add('open');
+        mobileNav.classList.add('active');
         document.body.style.overflow = 'hidden';
     });
 
     // Close with X button
     if (mobileCloseBtn) {
         mobileCloseBtn.addEventListener('click', () => {
-            mobileNav.classList.remove('open');
+            mobileNav.classList.remove('active');
             document.body.style.overflow = '';
         });
     }
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-        if (mobileNav.classList.contains('open') &&
+        if (mobileNav.classList.contains('active') &&
             !mobileNav.contains(e.target) &&
             !mobileMenuBtn.contains(e.target)) {
-            mobileNav.classList.remove('open');
+            mobileNav.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -100,15 +100,15 @@ if (mobileMenuBtn && mobileNav) {
     // Close on link click
     mobileNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            mobileNav.classList.remove('open');
+            mobileNav.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
 
     // Close with Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
-            mobileNav.classList.remove('open');
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+            mobileNav.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
