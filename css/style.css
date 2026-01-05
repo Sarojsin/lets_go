@@ -627,7 +627,7 @@ footer {
     box-shadow: var(--glow-primary);
 }
 
-.team-member {
+/* .team-member {
     text-align: center;
 }
 
@@ -669,7 +669,7 @@ footer {
     border-radius: 50px;
     font-size: 0.8rem;
     font-weight: 500;
-}
+} */
 
 /* View Details Button */
 .view-details {

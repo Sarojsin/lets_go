@@ -121,7 +121,7 @@ body {
     border-color: rgba(0, 212, 255, 0.5);
 }
 
-.avatar {
+.avatar-container {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -137,7 +137,15 @@ body {
     border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
-.team-card:hover .avatar {
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;      /* auto adjust without stretching */
+    display: block;
+  }
+
+.team-card:hover .avatar-container {
     transform: scale(1.1) rotate(360deg);
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
 }
@@ -202,7 +210,7 @@ body {
 }
 
 .skills::-webkit-scrollbar-thumb {
-    background: #d5d5d5;
+    background: rgba(255,255,255,0.3);
     border-radius: 10px;
 }
 
@@ -243,7 +251,7 @@ body {
 .github:hover { background: #171515; }
 .facebook:hover { background: #1877F2; }
 .instagram:hover {background: linear-gradient(45deg,#F58529, #DD2A7B,#8134AF,#515BD4);}
-
+.twitter:hover { background: #1DA1F2; }
 
 .view-details {
     padding: 0.6rem 1.2rem;
