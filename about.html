@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TARAISHA TECH</title>
+
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
         })();
@@ -21,6 +22,16 @@
 </head>
 
 <body>
+    <div class="video-hero-container">
+        <video id="logoVideo" autoplay muted loop playsinline>
+            <source src="media/logo_animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+            <button id="toggleVideoButton" aria-label="Play/Pause"><i class="fa fa-pause"></i></button>
+            <button id="volumeButton" aria-label="Mute/Unmute"><i class="fa fa-volume-mute"></i></button>
+        </div>
+    </div>
     <div id="header-placeholder"></div>
 
     <!-- Page Hero -->
@@ -173,27 +184,27 @@
                     </div>
                 </div>
                 <div class="team-member fade-in">
-    <div class="member-image">
-        <img src="./media/Sushil.jpg" alt="Sushil Ghimire">
-    </div>
-    <div class="member-info">
-        <h3>Sushil Ghimire</h3>
-        <span class="member-role">Frontend Developer</span>
-        <p>Specializes in modern UI design with backend integration and API handling.</p>
-        <button class="view-details" data-member="Sushil" style="color: #16dc0c;">
-            View Details
-        </button>
-    </div>
-</div>
+                    <div class="member-image">
+                        <img src="./media/Sushil.jpg" alt="Sushil Ghimire">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sushil Ghimire</h3>
+                        <span class="member-role">Frontend Developer</span>
+                        <p>Specializes in modern UI design with backend integration and API handling.</p>
+                        <button class="view-details" data-member="Sushil" style="color: #16dc0c;">
+                            View Details
+                        </button>
+                    </div>
+                </div>
 
                 <!-- HR Manager -->
 
                 <!-- Operations Manager -->
-                 <!-- Member -->
+                <!-- Member -->
                 <div class="team-member fade-in">
                     <div class="member-image">
                         <img src="media\Sujal_Pant.jpg" alt="Sujal Pant">
-                    
+
                     </div>
                     <div class="member-info">
                         <h3>Sujal Pant</h3>
@@ -243,6 +254,64 @@
     <script src="js/i18n/i18n.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/modal.js"></script>
+    <script>
+        const video = document.getElementById('logoVideo');
+        const toggleButton = document.getElementById('toggleVideoButton');
+        const volumeButton = document.getElementById('volumeButton');
+
+        // Initial state
+        if (video.muted) {
+            volumeButton.innerHTML = '<i class="fa fa-volume-mute"></i>';
+        } else {
+            volumeButton.innerHTML = '<i class="fa fa-volume-up"></i>';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
+            } else {
+                video.pause();
+                toggleButton.innerHTML = '<i class="fa fa-play"></i>';
+            }
+        });
+
+        volumeButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            if (video.muted) {
+                volumeButton.innerHTML = '<i class="fa fa-volume-mute"></i>';
+            } else {
+                volumeButton.innerHTML = '<i class="fa fa-volume-up"></i>';
+            }
+        });
+
+        // Optional: Auto-pause on scroll behavior (Preserved from original)
+        let isUserPaused = false;
+
+        // Track if user manually paused so we don't auto-play on scroll back up
+        toggleButton.addEventListener('click', () => {
+            isUserPaused = video.paused;
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            // Simple logic: Pause when scrolled down significantly, play when at top
+            // modifying threshold to 100px so it's not too sensitive
+            if (scrollPosition > 100) {
+                if (!video.paused) {
+                    video.pause();
+                    toggleButton.innerHTML = '<i class="fa fa-play"></i>';
+                }
+            } else {
+                // Only auto-resume if the user didn't manually pause it
+                if (video.paused && !isUserPaused) {
+                    video.play().catch(e => console.log("Auto-play prevented:", e));
+                    toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
