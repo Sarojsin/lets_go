@@ -1,0 +1,33 @@
+Page Hero
+.page-hero {
+    background: transparent;
+    padding: 8rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--header-height);
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vw;
+    background: radial-gradient(circle, var(--color-primary-dark) 0%, transparent 60%);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+}
+
+[data-theme="light"] .page-hero::before {
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 60%);
+    opacity: 0.1;
+}
+
+.page-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
