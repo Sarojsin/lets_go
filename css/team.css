@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #fff;
     overflow-x: hidden;
 }
@@ -63,29 +62,37 @@ body {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
 }
 
+
 .team-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 30px;
+    padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
     cursor: pointer;
     animation: fadeInUp 0.8s ease backwards;
+
 }
 
+
+
 .team-card:nth-child(1) { animation-delay: 0.1s; }
-.team-card:nth-child(2) { animation-delay: 0.2s; }
-.team-card:nth-child(3) { animation-delay: 0.3s; }
-.team-card:nth-child(4) { animation-delay: 0.4s; }
-.team-card:nth-child(5) { animation-delay: 0.5s; }
-.team-card:nth-child(6) { animation-delay: 0.6s; }
+.team-card:nth-child(2) { animation-delay: 0.3s; }
+.team-card:nth-child(3) { animation-delay: 0.6s; }
+.team-card:nth-child(4) { animation-delay: 0.9s; }
+.team-card:nth-child(5) { animation-delay: 1.2s; }
+.team-card:nth-child(6) { animation-delay: 1.5s; }
 
 @keyframes fadeInUp {
     from {
@@ -105,31 +112,46 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.6s;
-    z-index: -1;
+    background: linear-gradient(45deg, transparent, rgba(128, 0, 255, 0.1), transparent);
+    /* transform: rotate(45deg); */
+    /* transition: all 0.6s; */
+    z-index: -10;
+    animation: rotateSnake 2s linear infinite;
 }
 
-.team-card:hover::before {
-    left: 100%;
+@keyframes rotateSnake {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
 }
+
+/* .team-card:hover::before {
+    left: 100%;
+} */
 
 .team-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
-    border-color: rgba(0, 212, 255, 0.5);
+    border-color: hsl(250.14, 79.78%, 65.1%);
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin: 0 auto 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 3rem;
     font-weight: bold;
     position: relative;
@@ -141,7 +163,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    object-fit: cover;      /* auto adjust without stretching */
+    object-fit: cover;      
     display: block;
   }
 
@@ -166,12 +188,39 @@ body {
 }
 
 .bio {
-    color: #b8b8d1;
-    line-height: 1.6;
-    text-align: center;
     font-size: 0.95rem;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #b8b8d1;
+    max-height: 4.8em; 
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
+
+.bio.expanded {
+    max-height: 120px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* + more button */
+.bio-toggle {
+    display: flex;
+    border: none;
+    color: #00d4ff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin: 0.4rem auto 1rem;
+    background-color: transparent;
+}
+
+.bio::-webkit-scrollbar {
+    width: 4px;
+}
+
+.bio::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+}
+
 
 .skills {
     display: flex;
@@ -181,19 +230,20 @@ body {
     max-height: 110px; 
     overflow-y: auto;
     padding: 6px;
-    margin-bottom: 40px;
+    margin-bottom: 1.2rem;
     scrollbar-width: thin; 
     scrollbar-color: #00d4ff transparent;
 }
 
 .skill-tag {
-    background: rgba(0, 212, 255, 0.2);
+    background: rgba(0, 191, 255, 0.3);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
     border: 1px solid rgba(0, 212, 255, 0.3);
     white-space: nowrap;
     transition: all 0.3s;
+    margin-top: 10px;
 }
 
 .skill-tag:hover {
@@ -214,18 +264,11 @@ body {
     border-radius: 10px;
 }
 
-
 .social-links {
     display: flex;
     justify-content: center;
     gap: 15px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    margin: 1rem 0;
 }
 
 .social-icon {
@@ -254,19 +297,28 @@ body {
 .twitter:hover { background: #1DA1F2; }
 
 .view-details {
-    padding: 0.6rem 1.2rem;
+    margin-top: auto;                
+    align-self: center;            
+    padding: 0.6rem 1.5rem;
     border-radius: 50px;
-    color: white;
     border: none;
+    background: linear-gradient(135deg, #4b3bda, #b242db);
+    background-size: 200% 200%;     
+    color: white;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 2rem;
-    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: gradientShift 2s ease infinite; 
 }
 
 .view-details:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(106,90,249,0.5);
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 
