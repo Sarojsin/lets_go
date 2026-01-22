@@ -30,20 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-        Abishek: {
-            name: "Abishek Bhatt",
-            role: "Senior Video Graphy",
-            bio: "Abishek focuses on creating content (like youtube , facebook ,tiktok and instagram) ,.",
-            details: "With 5 years of experience in video editing and content creation, Abishek has produced engaging content for various platforms. He specializes in thumbnail creation and speaking.",
-            skills: ["Video editing", "Thumbnail creation", "Speaking", "Content creation", "Social media management"],
-            experience: "2+ years",
-            education: "B.S. Interaction Design, Carnegie Mellon",
-            achievements: [
-                "Designed a component library used by 100,000+ daily active users",
-                "Improved Lighthouse scores from 65 to 95+ across client projects",
-                "Speaker at multiple web development conferences"
-            ]
-        },
         Sujal: {
             name: "Sujal Pant",
             role: "Senior Video Graphy",
