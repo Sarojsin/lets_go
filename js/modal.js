@@ -30,7 +30,21 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-        sujal: {
+        Abhishek: {
+            name: "Abishek Bhatt",
+            role: "Senior Video Graphy",
+            bio: "Abishek focuses on creating content (like youtube , facebook ,tiktok and instagram) ,.",
+            details: "With 5 years of experience in video editing and content creation, Abishek has produced engaging content for various platforms. He specializes in thumbnail creation and speaking.",
+            skills: ["Video editing", "Thumbnail creation", "Speaking", "Content creation", "Social media management"],
+            experience: "2+ years",
+            education: "B.S. Interaction Design, Carnegie Mellon",
+            achievements: [
+                "Designed a component library used by 100,000+ daily active users",
+                "Improved Lighthouse scores from 65 to 95+ across client projects",
+                "Speaker at multiple web development conferences"
+            ]
+        },
+        Sujal: {
             name: "Sujal Pant",
             role: "Senior Video Graphy",
             bio: "Sujal focuses on creating content (like youtube , facebook ,tiktok and instagram) ,.",
@@ -45,45 +59,33 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         rijan: {
-            name: "Rijan Ghimire",
-            role: "Junior Web Developer",
+            name: "Rijan Shakya",
+            role: "Junior Web Developer",           
             bio: "Rijan is a junior web developer with a passion for building responsive and user-friendly websites. He has experience in both frontend and backend development.",
             details: "Rijan has worked on several projects using HTML, CSS, JavaScript, and popular frameworks. He is eager to learn and grow in the web development field.",
-            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
-            experience: "2+ years",
-            education: "Computer Engineering from Tribhuvan University(TU) ,collage advance collage of engineering",
-            achievements: [
+            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],    
+            experience: "1+ years",
+            education: "B.Sc. in Computer Science, Kathmandu University",
+            achievements: [ 
                 "Contributed to open-source web development projects",
                 "Built a personal portfolio website showcasing projects",
                 "Completed web development bootcamps and certifications"
             ]
         },
-        Sushil: {
-    name: "Sushil Ghimire",
-    role: "Frontend Developer",
-    bio: "Frontend developer focused on building modern, responsive, and visually engaging web interfaces using React and Tailwind CSS, with strong attention to UI/UX and performance.",
-    details: "Sushil specializes in creating clean, scalable frontend architectures and polished user experiences. He emphasizes modern design systems, smooth animations, and accessibility while working closely with backend APIs.",
-    skills: [
-        "JavaScript (ES6+)",
-        "React",
-        "Tailwind CSS",
-        "UI/UX Design",
-        "Modern Animations",
-        "MongoDB (Basics)",
-        "REST APIs",
-        "Responsive Design"
-    ],
-    experience: "Frontend-focused project experience",
-    education: "Bachelor’s Degree in Computer Engineering",
-    achievements: [
-        "Built modern, responsive web interfaces using React and Tailwind CSS",
-        "Designed user-friendly UI/UX layouts with accessibility in mind",
-        "Implemented smooth UI animations for enhanced user experience",
-        "Collaborated on full-stack projects integrating frontend with MongoDB-backed APIs"
-    ]
-},
-
-
+        sushil: {
+            name: "Sushil Ghimire",
+            role: "Frontend Developer",
+            bio: "Specializes in Modern UI design with backend integration, API handling.",
+            details: "Sushil has experience with Vue JS, React JS, Tailwind CSS, and MongoDB. He focuses on creating responsive and accessible user interfaces.",
+            skills: ["Vue JS", "React JS", "Tailwind CSS", "MongoDB", "HTML", "CSS", "JavaScript"],
+            experience: "1+ years",
+            education: "B.Sc. in Computer Science",
+            achievements: [
+                "Built multiple responsive web applications",
+                "Expert in modern UI frameworks",
+                "Backend integration specialist"
+            ]
+        }
     };
 
     // Open modal when clicking view details
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 modalBody.innerHTML = `
                     <div class="modal-image">
-                        <img src="${btn.closest('.team-card, .team-member').querySelector('img').src}" alt="${member.name}">
+                        <img src="${btn.closest('.team-member').querySelector('img').src}" alt="${member.name}">
                     </div>
                     <div class="modal-details">
                         <h3>${member.name}</h3>
@@ -206,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add modal styles dynamically
     const modalStyles = `
         .member-info-section {
-            background: rgba(60, 63, 241, 0.16);
+            background: rgba(99, 102, 241, 0.05);
             padding: 1rem;
             border-radius: var(--radius-sm);
             margin: 1.5rem 0;
