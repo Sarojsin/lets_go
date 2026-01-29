@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
 
         },
-        Sujal: {
+        sujal: {
             name: "Sujal Pant",
             role: "Senior Video Graphy",
             bio: "Sujal focuses on creating content (like youtube , facebook ,tiktok and instagram) ,.",
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 modalBody.innerHTML = `
                     <div class="modal-image">
-                        <img src="${btn.closest('.team-member').querySelector('img').src}" alt="${member.name}">
+                        <img src="${btn.closest('.team-card, .team-member').querySelector('img').src}" alt="${member.name}">
                     </div>
                     <div class="modal-details">
                         <h3>${member.name}</h3>
@@ -207,11 +207,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalStyles = `
         .member-info-section {
             background: rgba(60, 63, 241, 0.16);
-            .element {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* required for Safari */
-}
-
             padding: 1rem;
             border-radius: var(--radius-sm);
             margin: 1.5rem 0;
